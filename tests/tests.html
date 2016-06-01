@@ -1,0 +1,75 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>QUnit Example</title>
+  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.23.1.css">
+</head>
+
+
+<body class="container">
+<div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+
+    <main>
+    	<section>
+        <h1 class="text-center page-header">Welcome to the Rock Paper Scissors Game</h1>
+       
+    		<form class="rock-paper-form" onsubmit="new RockPaper(); return false;">
+    			<fieldset>
+           <legend><strong>Type in how many rounds you would like to play below</strong></legend>
+    				<input type="text" value="3" id="best-of">
+
+            <ul class="list-unstyled">
+              <li>
+                <input type="radio" id="person-play" value="person" name="player"  checked="checked">
+                <label for="person-play">You vs CPU</label>
+              </li>
+              <li>
+        				<input type="radio" id="cpu-play" value="cpu" name="player">
+                <label for="cpu-play">CPU vs CPU</label>
+              </li>
+            </ul>
+            <p class="error" id="best-error"></p>
+    				<button type="submit" >Let the battle commence!!</button>
+    			</fieldset>
+        </form>
+     
+        <form id="gameControlsForm">
+          <div id="player-1-container" class="col-md-7">
+            <h4 id="player-1">Player 1: <span>0</span></h4>
+            
+            <ul class="moves">
+                <li class="move-images image-rock" id="rock"><span class="move-type">Rock</span></li>
+                <li class="move-images image-paper" id="paper"><span class="move-type">Paper</span></li>
+                <li class="move-images image-scissors" id="scissors"><span class="move-type">Scissors</span></li>
+            </ul>
+          </div>
+          <div id="player-2-container" class="col-md-5">
+            <h4 id="player-2">Player 2: <span>0</span></h4>
+            <ul class="robot-moves" class="player-label">
+                <li class="move-images image-rock" id="rock"><span class="move-type">Rock</span></li>
+                <li class="move-images image-paper" id="paper"><span class="move-type">Paper</span></li>
+                <li class="move-images image-scissors" id="scissors"><span class="move-type">Scissors</span></li>
+            </ul>
+          </div>
+        </form>
+
+        <p id="round-winner" class="col-6 text-center"></p>
+
+        <div id="winner-container" class="col-6 text-center">
+          <h4 id="winner-msg"></h4>
+          <button class="reset">Reset game</button>
+        </div>
+
+      </section>
+
+      <script src="../src/js/jquery.js"></script>
+
+  <script src="../src/js/main.js"></script>
+  <script src="https://code.jquery.com/qunit/qunit-1.23.1.js"></script>
+  <script src="tests.js"></script>
+    </body>
+
+
+</html>

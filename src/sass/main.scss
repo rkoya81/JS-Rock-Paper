@@ -1,0 +1,111 @@
+$green: #009900;
+
+
+
+.container {
+  background: #ffffff;
+  background: rgba(0,0,0,0.1);
+  ul {
+    padding: 10px 0;
+  }
+
+  h4 {
+    span {
+      color: $green;
+    }
+  }
+
+  legend {
+    border: none;
+    font-size: 14px;
+  }
+
+  #round-winner,
+  #winner-msg {
+    font-size: 20px;
+    clear: both;
+    color: $green;
+  }
+
+  button {
+    background: $green;
+    border: none;
+    color: #fff;
+    padding: 10px;
+  }
+
+  #best-error {
+    display: none;
+    &.error {
+      color: #ff0000;
+    }
+    &.show {
+      display: block;
+    }
+  }
+  
+}
+
+#winner-container {
+	display: none;
+}
+
+#gameControlsForm {
+	display: none;
+}
+
+.moves, .robot-moves {
+    padding: 20px 0;
+    display: inline-block;
+
+  .move-images {
+    background: url('/src/images/moves.png') no-repeat;
+    width: 175px;
+    height: 175px;
+    position: relative;
+    list-style: none;
+    box-sizing: border-box;
+    border: 6px solid #000;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 20px 0 0;
+    position: relative;
+
+    &.image-rock {
+      background-position: 0 0;
+    }
+
+    &.image-paper {
+      background-position: 0 -175px;
+    }
+
+    &.image-scissors {
+      background-position: 0 -350px;
+    }
+
+    .move-type {
+      text-transform: capitalize;
+      position: absolute;
+      bottom: 10px;
+      text-align: center;
+      width: 162px;
+    }
+
+    &.selected {
+      background-color: #5eff3c;
+      background-color: rgba(94, 255, 60, 0.5); 
+    }
+
+    &.unselected {
+      opacity: 0.5;
+    }
+  }
+}
+
+.robot-moves {
+  .move-images {
+    display: none;
+  }
+}
